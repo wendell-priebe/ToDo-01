@@ -1,0 +1,32 @@
+.container{
+    background: var(--gray-700);
+    height: 12.5rem;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+}
+
+.header {
+    color: var(--blue);
+    font-weight: 900;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    
+    width: 7.875rem;
+    height: 3rem;
+    margin-top: 4rem;
+
+    display: flex;
+    align-items: center;
+}
+
+.header span:last-child {
+    color: var(--purple-dark);
+}
+
+.foguete{
+    margin-right: 0.75rem;
+}
