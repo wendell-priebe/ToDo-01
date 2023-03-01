@@ -1,3 +1,4 @@
+
 # Sobre o desafio
 
 Nesse desafio, foi desenvolver uma aplicação de controle de tarefas no estilo **to-do list**, que contém as seguintes funcionalidades:
@@ -6,3 +7,10 @@ Nesse desafio, foi desenvolver uma aplicação de controle de tarefas no estilo 
 - Marcar e desmarcar uma tarefa como concluída
 - Remover uma tarefa da listagem
 - Mostrar o progresso de conclusão das tarefas
+
+
+Para executar:
+
+npm run dev
+
+Porta: http://localhost:5173/
