@@ -33,12 +33,9 @@ export function ToDo(props: ToDoProps) {
                 <div>
                 {/* <div className={styles.round}> */}
                     <input
-                        value={textDecoration}
                         type="checkbox"
                         id="checkbox"
-                        // task_id={task.id}
                         defaultChecked={props.isChecked}
-                        // {task.isChecked == true && checked} 
                         onClick={handleTask} 
                     />
                     <label htmlFor="checkbox"></label>

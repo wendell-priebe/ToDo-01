@@ -1,42 +1,20 @@
-import styles from './Tasks.module.css';
-import ClipboardSvg from '../../assets/clipboard.svg'
-import { useState } from 'react';
+import { useContext } from 'react';
+import { TasksContext } from '../../contexts/TasksContext';
 import { ToDo } from '../ToDo/ToDo';
 
-
-export interface TaskProps{
-    id: number
-    content: string
-    isChecked: boolean
-}
+import ClipboardSvg from '../../assets/clipboard.svg'
+import styles from './Tasks.module.css';
 
 export function Tasks() {
-    const [tasks, setTasks] = useState<TaskProps[]>([
-        {
-            id: 1,
-            content: "Comprar carro.",
-            isChecked: false
-        }, {
-            id: 2,
-            content: "Fazer tarefas de limpeza.",
-            isChecked: false
-        }, {
-            id: 3,
-            content: "Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.",
-            isChecked: true
-        }, {
-            id: 4,
-            content: "Construir um foguete e ir a lua.",
-            isChecked: true
-        }
-    ])
+
+    const { tasks, setTasks } = useContext(TasksContext)
 
     function toDoConclused(): number {
         let tasksConclused = tasks.filter((task) => task.isChecked === true)
         return tasksConclused.length ;
     }
 
-    function handleToggleTask(id: number): any{
+    function handleToggleTask(id: number){
         let toggleTask = tasks.map(task => {
             if(id === task.id){
                 return {...task, isChecked: !task.isChecked}
